@@ -3,10 +3,12 @@ import Posts from "./components/Posts";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import client from "./client.js";
 import Logo from "./surftrip-logo.png";
+import MyMap from "./components/MyMap";
 
 import "./components/Tabs.css";
 import './App.css';
 
+const position = [51.505, -0.09];
 
 export default function App() {
   const [articles, setArticles] = useState([]);
@@ -43,10 +45,9 @@ export default function App() {
               <Posts posts={articles} />
             </TabPanel>
             <TabPanel>
-            
+              <MyMap lng={10} lat={0} />
             </TabPanel>
           </Tabs>
-            
           </div>
         </main>
         
