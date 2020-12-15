@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
-import Posts from "./components/Posts";
+import { BiMap, BiListUl } from "react-icons/bi";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import Posts from "./components/Posts";
 import client from "./client.js";
 import Logo from "./surftrip-logo.png";
-import MyMap from "./components/MyMap";
+import SurfMap from "./components/SurfMap";
 
 import "./components/Tabs.css";
 import './App.css';
 
-const position = [51.505, -0.09];
-
 export default function App() {
   const [articles, setArticles] = useState([]);
+
 
   useEffect(() => {
     client
@@ -19,6 +19,8 @@ export default function App() {
       .then((res) => setArticles(res.items))
       .catch(() => console.log("Request failed"));
   }, []);
+
+  
 
   return (
     <div className="App">
@@ -37,15 +39,15 @@ export default function App() {
           <div className="wrapper">
           <Tabs>
             <TabList>
-              <Tab>List</Tab>
-              <Tab>Map</Tab>
+              <Tab><BiListUl size={24} className="tabicon" /><div className="tabtext">List</div></Tab>
+              <Tab><BiMap size={24} className="tabicon" /><div className="tabtext">Map</div></Tab>
             </TabList>
 
             <TabPanel>
               <Posts posts={articles} />
             </TabPanel>
             <TabPanel>
-              <MyMap lng={10} lat={0} />
+              <SurfMap lat={0} lng={10} posts={articles} />
             </TabPanel>
           </Tabs>
           </div>
