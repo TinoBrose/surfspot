@@ -2,6 +2,7 @@ import React from 'react';
 import { Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink } from './NavbarElements';
 import Logo from './Surftrip.png'
 
+
 const Navbar = () => {
     return (
         <>
