@@ -3,7 +3,6 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
 export default function MyMap({ lng, lat }) {
   const position = [lng, lat];
-  const Peahi = [-156,297538, 20,941877];
 
   return (
     <MapContainer center={position} zoom={2.5} scrollWheelZoom={false}>
