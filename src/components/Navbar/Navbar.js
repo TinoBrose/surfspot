@@ -8,6 +8,7 @@ import {
   NavBtnLink,
 } from "./NavbarElements";
 import Logo from "./Surftrip.png";
+import { BiMap, BiListUl } from "react-icons/bi";
 
 const Navbar = () => {
   return (
@@ -19,15 +20,19 @@ const Navbar = () => {
         <Bars />
         <NavMenu>
           <NavLink to="/" exact activeStyle>
+            <BiListUl size={24} className="tabicon" />
             Spot List
           </NavLink>
           <NavLink to="/maps" activeStyle>
+            <BiMap size={24} className="tabicon" />
             Maps
           </NavLink>
+          <div className="vl"></div>
+          <NavLink to="/about" activeStyle>
+            About
+          </NavLink>
         </NavMenu>
-        <NavBtn>
-          <NavBtnLink to="/signin">Sign In</NavBtnLink>
-        </NavBtn>
+          
       </Nav>
     </>
   );
