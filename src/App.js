@@ -13,6 +13,7 @@ import Posts from "./components/Posts";
 import SurfMap from "./components/SurfMap";
 import Navbar from "./components/Navbar/Navbar";
 import InnerPage from "./components/InnerPage";
+import About from "./components/About";
 //STYLE
 import "./components/Tabs.css";
 import "./App.css";
