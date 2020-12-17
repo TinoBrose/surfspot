@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import client from "../client.js";
 import { useParams } from "react-router-dom";
 //
+import InnerCard from "./InnerCard";
+//
 import "../App.css";
 
 const InnerPage = () => {
@@ -25,7 +27,9 @@ const InnerPage = () => {
     <div className="wrapper">
       {spot && (
         <div className="hero" style={style}>
-          <div className="inner">{spot.fields.country}</div>
+          <div className="inner-card">
+            <InnerCard spot={spot} />
+          </div>
         </div>
       )}
     </div>
