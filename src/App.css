@@ -9,6 +9,12 @@
   --dark-color: #031634;
 }
 
+@font-face {
+  font-family: "Egosurf";
+  src: local("Egosurf"),
+    url(/src/fonts/Egosurf\ Stiffler.otf) format("opentype");
+}
+
 html,
 body {
   margin: 0;
@@ -29,9 +35,8 @@ body {
   margin: 1rem 0;
 }
 
-.logo-image {
-  width: 100%;
-  max-width: 200px;
+.Logo {
+  max-width: 12rem;
 }
 
 /* Style the header links */
@@ -71,6 +76,18 @@ body {
   display: flex;
 }
 
+/*Font Styles*/
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Egosurf";
+  letter-spacing: 0.2rem;
+  margin: 0;
+}
+
 /*TABS*/
 
 .tabicon {
@@ -83,7 +100,7 @@ body {
 }
 
 .wrapper {
-  margin: 0 auto;
+  margin: 1rem auto;
   text-align: center;
 }
 
@@ -137,6 +154,15 @@ body {
   text-align: center;
 }
 
+.card-text-title {
+  display: inline-flex;
+}
+
+.card-country {
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+}
+
 .card-text h2 {
   margin: 0;
   font-weight: 700;
@@ -181,7 +207,6 @@ body {
 
 .marker-cluster-small {
   background-color: #009391 !important;
-  padding: 12px;
   text-decoration: none;
 }
 
@@ -213,38 +238,56 @@ body {
 }
 
 /* INNER PAGE */
+
+/* .wrapper {
+  margin: 0;
+} */
+
 .hero {
   width: 100vw;
   height: 80vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   align-items: center;
 }
 
+.hero-inner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 4rem;
+}
+
 .inner-card {
-  padding: 1rem;
+  flex: 1;
   display: grid;
-  grid-gap: 2rem;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  justify-items: center;
-  background-color: white;
+  grid-gap: 0.5rem;
+  grid-template-columns: repeat(1, 1fr);
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 4px;
+}
+
+.description-ctn {
+  flex: 2;
+  text-align: right;
+  padding: 2rem;
 }
 
 .card-item {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 4px;
 }
 
 .card-item-title {
+  flex: 1;
   margin: 8px;
   color: var(--main-color);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
 }
 
@@ -252,4 +295,22 @@ body {
   color: var(--highlight-color);
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+.head-title {
+  margin-bottom: 4rem;
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+}
+
+.inner-description {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.maps {
+  height: 300px;
+  width: 300px;
 }

@@ -28,9 +28,10 @@ const Post = ({ article }) => {
           />
         )}
         <div className="card-text">
-          <h2 className="card-title">
-            {name} ({country})
-          </h2>
+          <div className="card-text-title">
+          <h2 className="card-title">{name}</h2>
+          <h4 className="card-country">- {country}</h4>
+          </div>
           <div className="quick-info-wrapper">
             <div className="quick-info">
               <GiBigWave className="icon" /> {wavemaxheight} ft

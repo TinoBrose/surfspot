@@ -27,8 +27,17 @@ const InnerPage = () => {
     <div className="wrapper">
       {spot && (
         <div className="hero" style={style}>
-          <div className="inner-card">
+          <div className="hero-inner">
             <InnerCard spot={spot} />
+
+            <div className="description-ctn">
+              <div className="head-title">
+                {spot.fields.name}, {spot.fields.country}
+              </div>
+              <div className="inner-description">
+                <p>{spot.fields.description}</p>
+              </div>
+            </div>
           </div>
         </div>
       )}
