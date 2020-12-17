@@ -13,6 +13,7 @@ import Posts from "./components/Posts";
 import SurfMap from "./components/SurfMap";
 import Navbar from "./components/Navbar";
 import InnerPage from "./components/InnerPage";
+import About from "./components/About";
 //STYLE
 import "./components/Tabs.css";
 import "./App.css";
@@ -36,6 +37,9 @@ export default function App() {
         <main>
           <div className="wrapper">
             <Switch>
+              <Route path="/about">
+                <About />
+              </Route>
               <Route path="/:slug">
                 <InnerPage />
               </Route>
