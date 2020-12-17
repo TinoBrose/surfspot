@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { BiMap, BiListUl } from "react-icons/bi";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import Posts from "./components/Posts";
@@ -25,6 +27,9 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
+        <Router>
+          <Navbar />
+        </Router>
         <header>
           <div className="header">
           <img className="logo-image" src={Logo} alt="Logo"/>
