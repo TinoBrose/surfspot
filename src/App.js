@@ -33,11 +33,6 @@ export default function App() {
     <div className="App">
       <div className="container">
         <Navbar />
-        <header>
-          <div className="header">
-            <img className="logo-image" src={Logo} alt="Logo" />
-          </div>
-        </header>
         <main>
           <div className="wrapper">
             <Switch>

@@ -9,6 +9,10 @@
   --dark-color: #031634;
 }
 
+@font-face {
+  font-family: 'Egosurf';
+  src: local('Egosurf'), url(/src/fonts/Egosurf\ Stiffler.otf) format('opentype');}
+
 html,
 body {
   margin: 0;
@@ -29,6 +33,10 @@ body {
   margin: 1rem 0;
 }
 
+.Logo {
+  max-width: 12rem;
+}
+
 .logo-image{
   width: 100%;
   max-width: 200px;
@@ -43,7 +51,6 @@ body {
   text-align: center;
   padding: 12px;
   text-decoration: none;
-
 }
 
 /* Change the background color on mouse-over */
@@ -73,6 +80,19 @@ body {
   display: flex;
 }
 
+/*Font Styles*/
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Egosurf';
+  letter-spacing: 0.2rem;
+  margin: 0;
+  
+}
+
 /*TABS*/
 
 .tabicon {
@@ -86,7 +106,7 @@ body {
 }
 
 .wrapper {
-  margin: 0 auto;
+  margin: 1rem auto;
   text-align: center;
 }
 
@@ -140,6 +160,15 @@ body {
   text-align: center;
 }
 
+.card-text-title {
+  display: inline-flex;
+}
+
+.card-country {
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+}
+
 .card-text h2 {
   margin: 0;
   font-weight: 700;
@@ -185,7 +214,6 @@ body {
 
 .marker-cluster-small {
   background-color: #009391 !important;
-  padding: 12px;
   text-decoration: none;
 }
 
