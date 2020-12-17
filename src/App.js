@@ -39,6 +39,9 @@ export default function App() {
             <Route path="/maps">
               <SurfMap lat={0} lng={10} posts={articles} />
             </Route>
+            <Route path="/about">
+              <About />
+            </Route>
             <Route path="/:slug">
               <InnerPage />
             </Route>
