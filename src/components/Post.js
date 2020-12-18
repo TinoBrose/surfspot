@@ -29,8 +29,9 @@ const Post = ({ article }) => {
         )}
         <div className="card-text">
           <div className="card-text-title">
-          <h2 className="card-title">{name}</h2>
-          <h4 className="card-country">- {country}</h4>
+            <span className="card-title">
+              {name} ({country})
+            </span>
           </div>
           <div className="quick-info-wrapper">
             <div className="quick-info">

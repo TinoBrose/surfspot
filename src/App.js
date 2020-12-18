@@ -42,6 +42,9 @@ export default function App() {
             <Route path="/:slug">
               <InnerPage />
             </Route>
+            <Route path="/about">
+              <About />
+            </Route>
             <Route exact path="/">
               <Posts cards={articles} />
             </Route>

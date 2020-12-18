@@ -7,27 +7,27 @@ import {
   NavBtn,
   NavBtnLink,
 } from "./NavbarElements";
-import Logo from "./Surftrip.png";
+import Logo from "../../logo.png";
 
 const Navbar = () => {
   return (
     <>
       <Nav>
-        <NavLink to="/">
-          <img className="Logo" src={Logo} alt="Surftrip" />
-        </NavLink>
-        <Bars />
         <NavMenu>
+          <NavLink to="/">
+            <img className="Logo" src={Logo} alt="Surftrip" />
+          </NavLink>
           <NavLink to="/" exact activeStyle>
-            Spot List
+            <span className="menu-item">LIST</span>
           </NavLink>
           <NavLink to="/maps" activeStyle>
-            Maps
+            <span className="menu-item">MAPS</span>
           </NavLink>
+          <NavLink to="/about">
+            <span className="menu-item">ABOUT</span>
+          </NavLink>
+          <Bars />
         </NavMenu>
-        <NavBtn>
-          <NavBtnLink to="/signin">Sign In</NavBtnLink>
-        </NavBtn>
       </Nav>
     </>
   );

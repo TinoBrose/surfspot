@@ -31,9 +31,9 @@ const InnerPage = () => {
             <InnerCard spot={spot} />
 
             <div className="description-ctn">
-              <div className="head-title">
-                {spot.fields.name}, {spot.fields.country}
-              </div>
+              <h1 className="head-title">{spot.fields.name}</h1>
+              <h1 className="head-title country">{spot.fields.country}</h1>
+
               <div className="inner-description">
                 <p>{spot.fields.description}</p>
               </div>
