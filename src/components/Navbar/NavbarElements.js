@@ -7,8 +7,8 @@ export const Nav = styled.nav`
   height: 104px;
   border-bottom: 1px solid #f2f2f2;
   display: flex;
-  justify-content: center;
-  padding: 0.5rem calc((100vw - 992px) / 2);
+  justify-content: space-between;
+  padding: 0.5rem calc((100vw - 600px) / 2);
   z-index: 10;
   font-size: 2px;
 `;
@@ -17,6 +17,8 @@ export const NavLink = styled(Link)`
   color: #000;
   display: flex;
   align-items: center;
+  flex: 1;
+  text-align: center;
   text-decoration: none;
   padding: 0 1rem;
   cursor: pointer;

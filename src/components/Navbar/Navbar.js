@@ -14,18 +14,25 @@ const Navbar = () => {
     <>
       <Nav>
         <NavMenu>
-          <NavLink to="/about">
-            <span className="menu-item">ABOUT</span>
-          </NavLink>
-          <NavLink to="/">
-            <img className="Logo" src={Logo} alt="Surftrip" />
-          </NavLink>
-          <NavLink to="/" exact activeStyle>
-            <span className="menu-item">LIST</span>
-          </NavLink>
-          <NavLink to="/maps" activeStyle>
-            <span className="menu-item">MAPS</span>
-          </NavLink>
+          <div className="about-menu menu-item">
+            <NavLink to="/about">
+              <span>ABOUT</span>
+            </NavLink>
+          </div>
+          <div className="menu-item">
+            <NavLink to="/">
+              <img className="Logo" src={Logo} alt="Surftrip" />
+            </NavLink>
+          </div>
+          <div className="main-menu menu-item">
+            <NavLink to="/" exact activeStyle>
+              <span className="menu-item">LIST</span>
+            </NavLink>
+            <NavLink to="/maps" activeStyle>
+              <span className="menu-item">MAPS</span>
+            </NavLink>
+          </div>
+
           <Bars />
         </NavMenu>
       </Nav>
