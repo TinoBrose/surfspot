@@ -4,7 +4,7 @@ import { AiFillGithub } from "react-icons/ai";
 const About = () => {
   return (
     <div className="about">
-      <h2>Surftrip Group Project - Group 5</h2>
+      <h2>Surfspot Group Project - Group 5</h2>
       <div
         onClick={() =>
           window.open("https://github.com/Tinob-92/surftrip", "_blank")

@@ -39,6 +39,11 @@ body {
   margin-right: 1rem;
 }
 
+.tabicon {
+  padding-top: 0.2rem;
+  padding-right: 0.2rem;
+}
+
 /* Style the header links */
 
 .header a {
