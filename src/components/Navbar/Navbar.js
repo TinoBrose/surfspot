@@ -14,6 +14,9 @@ const Navbar = () => {
     <>
       <Nav>
         <NavMenu>
+          <NavLink to="/about">
+            <span className="menu-item">ABOUT</span>
+          </NavLink>
           <NavLink to="/">
             <img className="Logo" src={Logo} alt="Surftrip" />
           </NavLink>
@@ -22,9 +25,6 @@ const Navbar = () => {
           </NavLink>
           <NavLink to="/maps" activeStyle>
             <span className="menu-item">MAPS</span>
-          </NavLink>
-          <NavLink to="/about">
-            <span className="menu-item">ABOUT</span>
           </NavLink>
           <Bars />
         </NavMenu>
