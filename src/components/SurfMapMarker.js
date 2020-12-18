@@ -8,12 +8,11 @@ import { Icon } from "leaflet";
 const surfer = new Icon({
   iconUrl: "/surf_icon.svg",
   iconSize: [40, 40],
-  className: 'surficon',
+  className: "surficon",
   iconColor: "red",
 });
 
 const SurfMapMarker = ({ article }) => {
-    
   const {
     name,
     country,
@@ -23,35 +22,43 @@ const SurfMapMarker = ({ article }) => {
     wavemaxheight,
     windspeed,
     lat,
-    lng
+    lng,
   } = article.fields;
 
   //const postDescription = marked(description);
 
   return (
     <>
-        <Marker position={[lat, lng]} icon={surfer} className="surficon">
-            <Popup style={{width: 200}}>
-                {image && (
-                    <img
-                    className="card-image-popup"
-                    src={image.fields.file.url}
-                    alt={name}
-                    title={name}
-                    />
-                )}
-                <div className="card-text">
-                    <h2 className="card-title">
-                    {name} ({country})
-                    </h2>
-                    <ul className="ul-popup">
-                        <li><GiBigWave className="icon" /> {wavemaxheight} ft</li>
-                        <li><FaTemperatureHigh className="icon" /> {airtemperature} °C</li>
-                        <li><FiWind className="icon" /> {windspeed} mph</li>
-                    </ul>
+      <Marker position={[lat, lng]} icon={surfer} className="surficon">
+        <Popup style={{ width: 200 }}>
+          {image && (
+            <img
+              className="card-image-popup"
+              src={image.fields.file.url}
+              alt={name}
+              title={name}
+            />
+          )}
+          <div className="popup">
+            <div className="popup-text">
+              <div className="popup-title">
+                {name}, {country}
+              </div>
+              <div className="popup-info-wrp">
+                <div className="popup-info">
+                  <GiBigWave className="icon" /> {wavemaxheight} ft
                 </div>
-            </Popup>
-        </Marker>
+                <div className="popup-info">
+                  <FaTemperatureHigh className="icon" /> {airtemperature} °C
+                </div>
+                <div className="popup-info">
+                  <FiWind className="icon" /> {windspeed} mph
+                </div>
+              </div>
+            </div>
+          </div>
+        </Popup>
+      </Marker>
     </>
   );
 };

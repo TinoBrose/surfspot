@@ -150,7 +150,7 @@ h5 {
 
 .card-image-popup {
   width: 100%;
-  height: 15vh;
+  height: 50%;
   object-fit: cover;
 }
 .card-image:hover {
@@ -161,6 +161,12 @@ h5 {
   padding: 16px 8px 0px 8px;
   text-align: center;
   font-size: 24px;
+}
+
+.card-text h2 {
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  margin: 0;
 }
 
 .card-text-title {
@@ -198,14 +204,60 @@ h5 {
   font-weight: 700;
 }
 
-.ul-popup {
-  margin: 0 !important;
+.quick-info .icon {
+  color: var(--highlight-color);
+  margin-right: 4px;
 }
 
-.icon {
+/* POPUP */
+.leaflet-popup-content {
+  margin: 0 !important;
+  width: 300px !important;
+  overflow: hidden;
+}
+
+.leaflet-popup-content-wrapper {
+  overflow: hidden;
+}
+
+.leaflet-popup-close-button {
+  visibility: hidden !important;
+}
+
+.popup {
+  margin: 0;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.popup-title {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  font-weight: 700;
+}
+
+.popup-info-wrp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 1rem;
+}
+
+.popup-info {
+  display: flex;
+  flex: 1;
+  font-size: 1rem;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark-color);
+  font-weight: 700;
+}
+
+.popup-info .icon {
   color: var(--highlight-color);
-  font-size: 1.5rem;
-  padding-right: 0.5rem;
+  font-size: 1rem;
+  padding-right: 0.2rem;
 }
 
 /* MAP */

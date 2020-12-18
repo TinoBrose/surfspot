@@ -30,7 +30,7 @@ const Post = ({ article }) => {
         <div className="card-text">
           <div className="card-text-title">
             <span className="card-title">
-              {name} ({country})
+              {name}, {country}
             </span>
           </div>
           <div className="quick-info-wrapper">
