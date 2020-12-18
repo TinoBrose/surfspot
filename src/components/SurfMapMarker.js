@@ -1,4 +1,6 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+
 import { Marker, Popup } from "react-leaflet";
 import { GiBigWave } from "react-icons/gi";
 import { FaTemperatureHigh } from "react-icons/fa";
@@ -16,7 +18,7 @@ const SurfMapMarker = ({ article }) => {
   const {
     name,
     country,
-    //description,
+    slug,
     image,
     airtemperature,
     wavemaxheight,
@@ -41,9 +43,11 @@ const SurfMapMarker = ({ article }) => {
           )}
           <div className="popup">
             <div className="popup-text">
-              <div className="popup-title">
-                {name}, {country}
-              </div>
+              <NavLink to={`/${slug}`} className="popup-link">
+                <div className="popup-title">
+                  {name}, {country}
+                </div>
+              </NavLink>
               <div className="popup-info-wrp">
                 <div className="popup-info">
                   <GiBigWave className="icon" /> {wavemaxheight} ft
