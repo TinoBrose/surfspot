@@ -1,11 +1,11 @@
 import React from "react";
 import Post from "./Post";
 
-const Posts = ({ cards }) => {
+const Posts = ({ spots }) => {
   return (
     <div className="cards">
-      {cards.map((article, index) => (
-        <Post article={article} key={index} />
+      {spots.map((item, index) => (
+        <Post item={item} key={index} />
       ))}
     </div>
   );

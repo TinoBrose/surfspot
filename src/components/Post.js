@@ -5,7 +5,7 @@ import { GiBigWave } from "react-icons/gi";
 import { FaTemperatureHigh } from "react-icons/fa";
 import { FiWind } from "react-icons/fi";
 
-const Post = ({ article }) => {
+const Post = ({ item }) => {
   const {
     name,
     slug,
@@ -14,7 +14,9 @@ const Post = ({ article }) => {
     airtemperature,
     wavemaxheight,
     windspeed,
-  } = article.fields;
+  } = item;
+
+  console.log(item.wavemaxheight.$numberDecimal)
 
   return (
     <NavLink to={`/${slug}`} className="card">
@@ -22,7 +24,7 @@ const Post = ({ article }) => {
         {image && (
           <img
             className="card-image"
-            src={image.fields.file.url}
+            src={image}
             alt={name}
             title={name}
           />
@@ -35,13 +37,13 @@ const Post = ({ article }) => {
           </div>
           <div className="quick-info-wrapper">
             <div className="quick-info">
-              <GiBigWave className="icon" /> {wavemaxheight} ft
+              <GiBigWave className="icon" /> {wavemaxheight.$numberDecimal} ft
             </div>
             <div className="quick-info">
-              <FaTemperatureHigh className="icon" /> {airtemperature} °C
+              <FaTemperatureHigh className="icon" /> {airtemperature.$numberDecimal} °C
             </div>
             <div className="quick-info">
-              <FiWind className="icon" /> {windspeed} mph
+              <FiWind className="icon" /> {windspeed.$numberDecimal} mph
             </div>
           </div>
         </div>

@@ -2,10 +2,6 @@ import React from "react";
 
 const Innercard = ({ spot }) => {
   const {
-    name,
-    slug,
-    country,
-    image,
     airtemperature,
     watertemperature,
     waveminheight,
@@ -13,14 +9,16 @@ const Innercard = ({ spot }) => {
     swelldirection,
     windspeed,
     winddirection,
-  } = spot.fields;
+  } = spot;
+
+
   return (
     <>
       <div className="inner-card">
         <div className="card-item">
           <div className="card-item-title">Surf Height</div>
           <div className="card-item-info">
-            {waveminheight} / {wavemaxheight}ft
+            {waveminheight.$numberDecimal} / {wavemaxheight.$numberDecimal}ft
           </div>
         </div>
         <div className="card-item">
@@ -29,7 +27,7 @@ const Innercard = ({ spot }) => {
         </div>
         <div className="card-item">
           <div className="card-item-title">Wind Speed</div>
-          <div className="card-item-info">{windspeed} Knots</div>
+          <div className="card-item-info">{windspeed.$numberDecimal} Knots</div>
         </div>
         <div className="card-item">
           <div className="card-item-title">Wind Direction</div>
@@ -37,11 +35,11 @@ const Innercard = ({ spot }) => {
         </div>
         <div className="card-item">
           <div className="card-item-title">Air Temperature</div>
-          <div className="card-item-info">{airtemperature} °C</div>
+          <div className="card-item-info">{airtemperature.$numberDecimal} °C</div>
         </div>
         <div className="card-item">
           <div className="card-item-title">Water Temperature</div>
-          <div className="card-item-info">{watertemperature} °C</div>
+          <div className="card-item-info">{watertemperature.$numberDecimal} °C</div>
         </div>
       </div>
     </>

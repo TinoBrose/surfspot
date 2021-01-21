@@ -3,7 +3,7 @@ import { MapContainer, TileLayer } from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-markercluster";
 import SurfMapMarker from "./SurfMapMarker";
 
-export default function SurfMap({ posts }) {
+export default function SurfMap({ spots }) {
   return (
     <MapContainer center={[20, -10]} zoom={2.5} scrollWheelZoom={true}>
       <TileLayer
@@ -11,8 +11,8 @@ export default function SurfMap({ posts }) {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <MarkerClusterGroup showCoverageOnHover={false}>
-        {posts.map((article, index) => (
-          <SurfMapMarker article={article} key={index} />
+        {spots.map((item, index) => (
+          <SurfMapMarker item={item} key={index} />
         ))}
       </MarkerClusterGroup>
     </MapContainer>

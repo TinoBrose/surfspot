@@ -14,7 +14,7 @@ const surfer = new Icon({
   iconColor: "red",
 });
 
-const SurfMapMarker = ({ article }) => {
+const SurfMapMarker = ({ item }) => {
   const {
     name,
     country,
@@ -25,18 +25,18 @@ const SurfMapMarker = ({ article }) => {
     windspeed,
     lat,
     lng,
-  } = article.fields;
+  } = item;
 
   //const postDescription = marked(description);
 
   return (
     <>
-      <Marker position={[lat, lng]} icon={surfer} className="surficon">
+      <Marker position={[lat.$numberDecimal, lng.$numberDecimal]} icon={surfer} className="surficon">
         <Popup style={{ width: 200 }}>
           {image && (
             <img
               className="card-image-popup"
-              src={image.fields.file.url}
+              src={image}
               alt={name}
               title={name}
             />
@@ -50,13 +50,13 @@ const SurfMapMarker = ({ article }) => {
               </NavLink>
               <div className="popup-info-wrp">
                 <div className="popup-info">
-                  <GiBigWave className="icon" /> {wavemaxheight} ft
+                  <GiBigWave className="icon" /> {wavemaxheight.$numberDecimal} ft
                 </div>
                 <div className="popup-info">
-                  <FaTemperatureHigh className="icon" /> {airtemperature} °C
+                  <FaTemperatureHigh className="icon" /> {airtemperature.$numberDecimal} °C
                 </div>
                 <div className="popup-info">
-                  <FiWind className="icon" /> {windspeed} mph
+                  <FiWind className="icon" /> {windspeed.$numberDecimal} mph
                 </div>
               </div>
             </div>

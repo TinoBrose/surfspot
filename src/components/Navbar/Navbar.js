@@ -4,8 +4,6 @@ import {
   NavLink,
   Bars,
   NavMenu,
-  NavBtn,
-  NavBtnLink,
 } from "./NavbarElements";
 import Logo from "../../logo.png";
 import { BiMap, BiListUl } from "react-icons/bi";

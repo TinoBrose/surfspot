@@ -12,7 +12,7 @@ const About = () => {
         className="about-link"
       >
         <AiFillGithub className="github-icon" />
-        <p>github.com/Tinob-92/surftrip</p>
+        <p>See code on GitHub</p>
       </div>
     </div>
   );
