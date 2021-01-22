@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/surfspot/static/css/main.e51ab981.chunk.css",
-    "main.js": "/surfspot/static/js/main.a4341e71.chunk.js",
-    "main.js.map": "/surfspot/static/js/main.a4341e71.chunk.js.map",
+    "main.js": "/surfspot/static/js/main.515b26ab.chunk.js",
+    "main.js.map": "/surfspot/static/js/main.515b26ab.chunk.js.map",
     "runtime-main.js": "/surfspot/static/js/runtime-main.fe1e619e.js",
     "runtime-main.js.map": "/surfspot/static/js/runtime-main.fe1e619e.js.map",
     "static/js/2.51eea8a5.chunk.js": "/surfspot/static/js/2.51eea8a5.chunk.js",
@@ -10,12 +10,13 @@
     "index.html": "/surfspot/index.html",
     "static/css/main.e51ab981.chunk.css.map": "/surfspot/static/css/main.e51ab981.chunk.css.map",
     "static/js/2.51eea8a5.chunk.js.LICENSE.txt": "/surfspot/static/js/2.51eea8a5.chunk.js.LICENSE.txt",
-    "static/media/App.css": "/surfspot/static/media/Egosurf Stiffler.261c238e.otf"
+    "static/media/App.css": "/surfspot/static/media/Egosurf Stiffler.261c238e.otf",
+    "static/media/surf_icon.4191f9db.svg": "/surfspot/static/media/surf_icon.4191f9db.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.fe1e619e.js",
     "static/js/2.51eea8a5.chunk.js",
     "static/css/main.e51ab981.chunk.css",
-    "static/js/main.a4341e71.chunk.js"
+    "static/js/main.515b26ab.chunk.js"
   ]
 }
