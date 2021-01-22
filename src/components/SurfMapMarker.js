@@ -2,21 +2,23 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 import { Marker, Popup } from "react-leaflet";
+
 import { GiBigWave } from "react-icons/gi";
 import { FaTemperatureHigh } from "react-icons/fa";
 import { FiWind } from "react-icons/fi";
 import { Icon } from "leaflet";
 
+import SurfIcon from '../surf_icon.svg';
+
 // const { REACT_APP_ICON_URL } = process.env;
 
 const surfer = new Icon({
-  iconUrl: "../surficon.png",
+  iconUrl: SurfIcon,
   iconSize: [40, 40],
   className: "surficon",
   iconColor: "red",
 });
 
-console.log(surfer)
 
 const SurfMapMarker = ({ item }) => {
   const {
