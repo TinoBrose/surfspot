@@ -10,14 +10,8 @@ import { Icon } from "leaflet";
 
 import SurfIcon from '../surf_icon.svg';
 
-// const { REACT_APP_ICON_URL } = process.env;
 
-const surfer = new Icon({
-  iconUrl: SurfIcon,
-  iconSize: [40, 40],
-  className: "surficon",
-  iconColor: "red",
-});
+
 
 
 const SurfMapMarker = ({ item }) => {
@@ -33,11 +27,16 @@ const SurfMapMarker = ({ item }) => {
     lng,
   } = item;
 
+  const surfer = new Icon({
+    iconUrl: SurfIcon,
+    iconSize: [40, 40],
+  });
+
   //const postDescription = marked(description);
 
   return (
     <>
-      <Marker position={[lat.$numberDecimal, lng.$numberDecimal]} icon={surfer} className="surficon">
+      <Marker position={[lat.$numberDecimal, lng.$numberDecimal]} icon={surfer} >
         <Popup style={{ width: 200 }}>
           {image && (
             <img

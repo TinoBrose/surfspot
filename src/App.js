@@ -36,7 +36,7 @@ export default function App() {
       .catch((err) => setError(true));
   };
 
-  useEffect(loadSpots, [isLoading, error]);
+  useEffect(loadSpots, []);
 
   return (
     <div className="App">
@@ -57,7 +57,7 @@ export default function App() {
               <About />
             </Route>
             <Route exact path="/">
-              <Posts spots={items} />
+              <Posts spots={items} isLoading={isLoading} error={error}/>
             </Route>
           </Switch>
         </main>

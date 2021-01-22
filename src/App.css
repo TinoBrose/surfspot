@@ -412,3 +412,8 @@ h5 {
   display: flex;
   margin-left: 5rem !important;
 }
+
+.loader {
+  text-align: center;
+  margin-top: 5rem;
+}
