@@ -8,12 +8,12 @@ import { FaTemperatureHigh } from "react-icons/fa";
 import { FiWind } from "react-icons/fi";
 import { Icon } from "leaflet";
 
-import SurfIcon from '../surf_icon.svg';
+// import SurfIcon from '../surf_icon.svg';
 
 // const { REACT_APP_ICON_URL } = process.env;
 
 const surfer = new Icon({
-  iconUrl: SurfIcon,
+  iconUrl: "./surficon.png",
   iconSize: [40, 40],
   className: "surficon",
   iconColor: "red",
