@@ -16,8 +16,6 @@ const Post = ({ item }) => {
     windspeed,
   } = item;
 
-  console.log(item.wavemaxheight.$numberDecimal)
-
   return (
     <NavLink to={`/${slug}`} className="card">
       <div>

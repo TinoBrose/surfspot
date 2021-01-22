@@ -24,11 +24,11 @@ const Navbar = () => {
             </NavLink>
           </div>
           <div className="main-menu menu-item">
-            <NavLink to="/" exact activeStyle>
+            <NavLink to="/" exact >
               <BiListUl size={24} className="tabicon" />
               <span className="menu-item"> LIST</span>
             </NavLink>
-            <NavLink to="/maps" activeStyle>
+            <NavLink to="/maps" >
               <BiMap size={24} className="tabicon" />
               <span className="menu-item"> MAPS</span>
             </NavLink>
