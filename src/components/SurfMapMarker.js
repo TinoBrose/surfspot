@@ -13,7 +13,7 @@ import { Icon } from "leaflet";
 // const { REACT_APP_ICON_URL } = process.env;
 
 const surfer = new Icon({
-  iconUrl: "./surficon.png",
+  iconUrl: "/surficon.png",
   iconSize: [40, 40],
   className: "surficon",
   iconColor: "red",
